@@ -96,6 +96,8 @@ func (r *Router) Match(req *http.Request, match *RouteMatch) bool {
 		}
 	}
 
+	// OSS change 2
+
 	if match.MatchErr == ErrMethodMismatch {
 		if r.MethodNotAllowedHandler != nil {
 			match.Handler = r.MethodNotAllowedHandler
